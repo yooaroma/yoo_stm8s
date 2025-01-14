@@ -1,6 +1,10 @@
-#makefile 
-#yooaroma : 20230104 
-# 컴퓨터\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB\VID_0483&PID_3744
+# makefile 
+# yooaroma : 20230104 
+# https://www.st.com/en/evaluation-tools/stm8s-discovery.html
+# https://www.st.com/en/microcontrollers-microprocessors/stm8s105c6.html
+# https://www.st.com/resource/en/datasheet/stm8s105c6.pdf
+# https://www.st.com/resource/en/reference_manual/rm0016-stm8s-series-and-stm8af-series-8bit-microcontrollers-stmicroelectronics.pdf
+# https://github.com/yooaroma/yoo_stm8s
 
 CC = sdcc
 PRJ = stm8s_blink
@@ -9,19 +13,19 @@ PRJ_MCU = STM8S105
 PRJ_MCU_FLASH = stm8s105?6
 PRJ_MCU_FLASHX = stm8s105x6
 
-#do not edit
+# do not edit
 TOP_DIR = ./../..
 OBJ_DIR = ./obj
 EXE_DIR = ./exe
 
 SRC = $(PRJ)_main.c
-#SRC += stm8s_gpio.c
-#SRC += stm8s_tim1.c
-#SRC += stm8s_tim2.c
-#SRC += stm8s_tim4.c
-#SRC += stm8s_clk.c
-#SRC += tm1628.c
-#SRC += vfd.c
+# SRC += stm8s_gpio.c
+# SRC += stm8s_tim1.c
+# SRC += stm8s_tim2.c
+# SRC += stm8s_tim4.c
+# SRC += stm8s_clk.c
+# SRC += tm1628.c
+# SRC += vfd.c
 
 VPATH = $(TOP_DIR)/lib/src
 VPATH += $(TOP_DIR)/mlib

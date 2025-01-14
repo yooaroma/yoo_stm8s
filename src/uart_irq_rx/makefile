@@ -1,8 +1,13 @@
-#makefile 
-#yooaroma : 20230104 
+# makefile 
+# yooaroma : 20230104 
+# https://www.st.com/en/evaluation-tools/stm8s-discovery.html
+# https://www.st.com/en/microcontrollers-microprocessors/stm8s105c6.html
+# https://www.st.com/resource/en/datasheet/stm8s105c6.pdf
+# https://www.st.com/resource/en/reference_manual/rm0016-stm8s-series-and-stm8af-series-8bit-microcontrollers-stmicroelectronics.pdf
+# https://github.com/yooaroma/yoo_stm8s
 
 CC = sdcc
-PRJ = stm8s_uart_irq
+PRJ = stm8s_uart_irq_rx
 FLASH_SIZE = 8192
 PRJ_MCU = STM8S105
 PRJ_MCU_FLASH = stm8s105?6

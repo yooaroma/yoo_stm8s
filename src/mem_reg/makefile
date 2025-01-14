@@ -1,13 +1,8 @@
-# makefile 
-# yooaroma : 20230104 
-# https://www.st.com/en/evaluation-tools/stm8s-discovery.html
-# https://www.st.com/en/microcontrollers-microprocessors/stm8s105c6.html
-# https://www.st.com/resource/en/datasheet/stm8s105c6.pdf
-# https://www.st.com/resource/en/reference_manual/rm0016-stm8s-series-and-stm8af-series-8bit-microcontrollers-stmicroelectronics.pdf
-# https://github.com/yooaroma/yoo_stm8s
+#makefile 
+#yooaroma : 20230104 
 
 CC = sdcc
-PRJ = stm8s_timer_irq
+PRJ = stm8s_dump_reg
 FLASH_SIZE = 8192
 
 #do not edit
@@ -22,20 +17,18 @@ SRC = $(PRJ)_main.c
 #SRC += stm8s_tim3.c
 #SRC += stm8s_tim4.c
 SRC += stm8s_clk.c
-SRC += stm8s_mib_it.c
 SRC += stm8s_mib_debug.c
+SRC += stm8s_mib_it.c
 SRC += stm8s_mib_vsprintf.c
-SRC += stm8s_mib_debug_tim.c
 
 VPATH = $(TOP_DIR)/lib/src
 VPATH += $(TOP_DIR)/mib
 
 OBJS = $(patsubst %.c,$(OBJ_DIR)/%.rel,$(SRC))
 C_DEFINE = -DSTMS105 
-C_DEFINE += -DUART_IRQ_RX_USE 
+C_DEFINE += -DUART_IRQ_USE 
 #C_DEFINE += -DUART_IRQ_TX_USE 
 #C_DEFINE += -DUART_485_USE 
-C_DEFINE += -D__MIB_DEBUG_TIM__
 
 all: $(OBJS)
 	$(CC) -mstm8 $(OBJS) -o $(EXE_DIR)/$(PRJ).ihx
@@ -51,9 +44,6 @@ $(OBJ_DIR)/%.rel: %.c
 
 clean:
 	rm -f *.map *.rel *.ihx *.o *.sym *.lk *.lst *.rst *.cdb *.bin *.asm *.hex $(OBJ_DIR)/*.* 
-	
-cleanall:
-	rm -f *.map *.rel *.ihx *.o *.sym *.lk *.lst *.rst *.cdb *.bin *.asm *.hex $(OBJ_DIR)/*.* $(EXE_DIR)/*.* 
 
 flash:
 	stm8flash.exe -c stlink -p stm8s105?6 -w $(EXE_DIR)/$(PRJ).ihx
