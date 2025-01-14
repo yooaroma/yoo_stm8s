@@ -1,0 +1,9 @@
+-muwx
+-i ./exe/stm8s_blink.ihx
+-b HOME = 0x8000
+-b DATA = 0x0001
+-k C:\tools\sdcc\bin\..\lib\stm8
+-l stm8
+./obj/stm8s_blink_main.rel
+
+-e
