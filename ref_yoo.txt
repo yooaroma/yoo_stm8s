@@ -40,3 +40,6 @@ https://www.st.com/en/development-tools/stm8cubemx.html
 
 stmide : stvd-stm8
 https://www.st.com/en/development-tools/stvd-stm8.html
+
+LF will be replaced by CRLF the next time Git touches it
+git config --global core.autocrlf true
