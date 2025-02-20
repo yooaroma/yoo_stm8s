@@ -39,6 +39,7 @@ C_DEFINE += -DUART_IRQ_RX_USE
 all: $(OBJS)
 	$(CC) -mstm8 $(OBJS) -o $(EXE_DIR)/$(PRJ).ihx
 	packihx $(EXE_DIR)/$(PRJ).ihx > $(EXE_DIR)/$(PRJ).hex
+	cp $(EXE_DIR)/$(PRJ).hex $(TOP_DIR)/bin
 #	makebin -s $(FLASH_SIZE) $(PRJ).ihx $(PRJ).bin
 
 $(OBJ_DIR)/%.rel: %.c

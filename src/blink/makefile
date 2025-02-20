@@ -35,6 +35,7 @@ OBJS = $(patsubst %.c,$(OBJ_DIR)/%.rel,$(SRC))
 all: $(OBJS)
 	$(CC) -mstm8 $(OBJS) -o $(EXE_DIR)/$(PRJ).ihx
 	packihx $(EXE_DIR)/$(PRJ).ihx > $(EXE_DIR)/$(PRJ).hex
+	cp $(EXE_DIR)/$(PRJ).hex $(TOP_DIR)/bin
 #	makebin -s $(FLASH_SIZE) $(PRJ).ihx $(PRJ).bin
 
 $(OBJ_DIR)/%.rel: %.c

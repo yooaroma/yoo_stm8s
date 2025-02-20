@@ -50,6 +50,7 @@ C_DEFINE += -D__MIB_DEBUG_TEST__
 all: $(OBJS)
 	$(CC) -mstm8 $(OBJS) -o $(EXE_DIR)/$(PRJ).ihx
 	packihx $(EXE_DIR)/$(PRJ).ihx > $(EXE_DIR)/$(PRJ).hex
+	cp $(EXE_DIR)/$(PRJ).hex $(TOP_DIR)/bin
 #	makebin -s $(FLASH_SIZE) $(PRJ).ihx $(PRJ).bin
 
 $(OBJ_DIR)/%.rel: %.c
