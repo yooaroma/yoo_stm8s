@@ -21,6 +21,8 @@
 ---
 
 ![STM8S-DISCOVERY](https://www.st.com/bin/ecommerce/api/image.PF247087.en.feature-description-include-personalized-no-cpn-large.jpg)
+<br>
+<img src="https://www.st.com/bin/ecommerce/api/image.PF247087.en.feature-description-include-personalized-no-cpn-large.jpg" title="STM8S-DISCOVERY" alt="STM8S-DISCOVERY"></img><br/>
 
 ---
 
@@ -132,23 +134,3 @@
   단축키 정리 (윈도우용) ⇢ (https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 ---
-
-Use SDCC Toolchain :
-Notice: make sure you can find your 'target' and 'interface' in OpenOcd config folder !, like: 'target/stm8s003.cfg'
-
-{
-"version": "0.2.0",
-"configurations": [
-{
-"type": "stm8-debug",
-"request": "launch",
-"name": "Launch Program",
-"serverType": "stm8-sdcc",
-"executable": ".\\out\\Debug\\stm8_demo.elf",
-"openOcdConfigs": [
-"interface/stlink.cfg",
-"target/stm8s003.cfg"
-]
-}
-]
-}
