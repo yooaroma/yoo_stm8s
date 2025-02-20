@@ -20,9 +20,7 @@
 
 ---
 
-![STM8S-DISCOVERY](https://www.st.com/bin/ecommerce/api/image.PF247087.en.feature-description-include-personalized-no-cpn-large.jpg)
-<br>
-<img src="https://www.st.com/bin/ecommerce/api/image.PF247087.en.feature-description-include-personalized-no-cpn-large.jpg" title="STM8S-DISCOVERY" alt="STM8S-DISCOVERY"></img><br/>
+<https://www.st.com/bin/ecommerce/api/image.PF247087.en.feature-description-include-personalized-no-cpn-large.jpg>
 
 ---
 
