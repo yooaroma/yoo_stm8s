@@ -88,12 +88,24 @@
 - 하고자 하는 디렉토리로 이동한다.
 - make 하면 makefile을 참고하여 실행한다.
 - 결과 화일은 obj 와 exe에 생성된다.
+- bin 디렉 밑에 xx.hex가 카피된다.
 - xx.hex 화일을 다운로드한다.
 - ST Visual Programmer 을 통해서 화일을 읽어 들인다.
 - File -> Open (xx.hex)
 - Configure 선택 (ST-LINK - USB - SWIM - STM8S105x6) OK
 - Program -> Current Tab (Ctl-P)
 - File -> Exit
+- baud 9600N81
+- consol open
+- help
+- cmd help
+
+---
+
+- git add .
+- git config --global core.autocrlf true
+- git commit -m "test all "
+- git push
 
 ---
 
